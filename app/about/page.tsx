@@ -14,7 +14,7 @@ function Page() {
         <h1 className="text-7xl text-secondary font-bold pb-20">ABOUT</h1>
       </div>
       <div className="container px-10 mt-20 xs-desktop:mt-10 tablet:mt-7 lg-mob:mt-5 tablet:px-6">
-        <p className="text-3xl font-bold">
+        <p className="text-3xl font-bold mb-5">
           Life can be tough, but “A Tuff Cookie never crumbles”
         </p>
         <p className="text-lg text-[#4B4B4B] mb-8">

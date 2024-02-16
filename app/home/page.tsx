@@ -7,6 +7,7 @@ import HomeButton from "@/components/HomeButton";
 import cookie from "@/assets/CookieImage.png";
 import grass from "@/assets/grass.png";
 import VideoPlayer from "@/components/VideoPlayer";
+import Link from "next/link";
 
 function Page() {
   return (
@@ -23,9 +24,15 @@ function Page() {
           />
         </div>
         <div className="flex flex-1 flex-col px-10 container gap-y-5 justify-end items-end pb-20">
-          <HomeButton text="ABOUT" />
-          <HomeButton text="PROJECTS" />
-          <HomeButton text="CONTACT" />
+          <Link href="/about">
+            <HomeButton text="ABOUT" />
+          </Link>
+          <Link href="/projects">
+            <HomeButton text="PROJECTS" />
+          </Link>
+          <Link href="/contact">
+            <HomeButton text="CONTACT" />
+          </Link>
         </div>
       </div>
       {/* <div className="container px-10 tablet:px-6 lg-mob:px-4">
@@ -49,7 +56,7 @@ function Page() {
 
       <div className="h-2 bg-black w-full mt-10 "></div>
       <div className="relative w-full overflow-hidden">
-        <div className="w-full whitespace-nowrap animate-marquee font-bold text-5xl mt-[18px] tablet:text-4xl semiLg-mob:3xl">
+        <div className="w-full whitespace-nowrap animate-marquee font-bold text-5xl mt-[18px] tablet:text-4xl semiLg-mob:text-3xl">
           STREET ARTIST NATURE FRESHNESS CREATIVITY{" "}
         </div>
       </div>
