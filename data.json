@@ -1,0 +1,38 @@
+[
+  {
+    "name": "James Gillespies",
+    "desc": "Over 6 workshops, students at James Gillespies High School transformed a student area in the school into a space that carries the stamp of their self-expression. Participants learned new skills, developed their ideas, and worked as a team to cocreate two murals which are now on display in their student area.",
+    "images": [
+      "/Projects/James_Gillespies/Main.jpg",
+      "/Projects/James_Gillespies/Ref-1.jpg",
+      "/Projects/James_Gillespies/Ref-2.jpg",
+      "/Projects/James_Gillespies/Ref-3.jpg"
+    ],
+    "quotes": [
+      "It was really enjoyable and it taught me a new skill that I hadn't tried before, and I've been doing it outside of school since then. I even got my own spray paints to do my own art at home",
+      "The best thing about this project is that it really felt like it came from the young people themselves. The impact on those young people meant that they came into school when they wouldn't have done, they talked to each other in ways they hadn't, they respected each other, they respected learning in a way that some of them had never done before, and they felt proud of themselves. Which was amazing. It was a brilliant thing."
+    ]
+  },
+  {
+    "name": "Plumstead Mural",
+    "desc": "Dan worked with 10-year-old Timon who won the Plumstead Mural competition, to design and paint a large scale mural on the outside wall of Plumstead Library. Commissioned by Greenwich Council and Tramshed Arts, led by Dan.",
+    "images": [
+      "/Projects/Plumstead_Mural/Main.jpg",
+      "/Projects/Plumstead_Mural/Ref-1.jpg",
+      "/Projects/Plumstead_Mural/Ref-2.jpg",
+      "/Projects/Plumstead_Mural/Ref-3.jpg"
+    ],
+    "quotes": []
+  },
+  {
+    "name": "Growffiti Project",
+    "desc": "Participants from Edinburgh Young Carers developed a youth allotment area at Bridgend Community Farmhouse, developing skills in graffiti techniques and food growing while being supported to access, participate and feel a sense of belonging at Bridgend. This project had a strong wellbeing focus, evolving the aims and outcomes in alignment with participant needs and interests.",
+    "images": [
+        "/Projects/Growffiti/Main.jpg",
+        "/Projects/Growffiti/Ref-1.jpg",
+        "/Projects/Growffiti/Ref-2.jpg",
+        "/Projects/Growffiti/Ref-3.jpg"
+      ],
+    "quotes": []
+  }
+]
