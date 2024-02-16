@@ -27,9 +27,9 @@ function Page() {
   const handleClick = () => {
     setIsExpanded(!isExpanded);
     window.scroll({
-      top:window.innerHeight,
-      behavior:"smooth"
-    })
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
   };
   return (
     <div className="overflow-hidden">
@@ -51,12 +51,11 @@ function Page() {
         </button>
       </div>
       <Swiper
-      spaceBetween={20}
+        spaceBetween={20}
         onSlideChange={(swiper) => {
           if (isExpanded) {
             setDetailsData(projectData[swiper.snapIndex]);
             console.log("Fainza");
-            
 
             // if (swiper.snapIndex < 1) {
             //   // setDisabledArrow("left");
@@ -101,7 +100,7 @@ function Page() {
             {isExpanded ? "See Less" : "See More"}
           </p>
           <div className="w-[22px] h-[36px]">
-            <Image src={dots}  alt="dots" />
+            <Image src={dots} alt="dots" />
           </div>
         </div>
       </button>
@@ -111,18 +110,34 @@ function Page() {
         <div className={`container  px-10 mt-52 tablet:px-3 tablet:mt-9`}>
           <div className="container flex items-center justify-between tablet:gap-x-3 gap-x-10">
             <div className="w-full max-w-96 aspect-square relative">
-              <Image className="object-cover rounded-[10.5px]" src={detailsData.images[1]} fill alt="image" />
+              <Image
+                className="object-cover rounded-[10.5px]"
+                src={detailsData.images[1]}
+                fill
+                alt="image"
+              />
             </div>
             <div className="w-full max-w-96 aspect-square relative">
-              <Image className="object-cover rounded-[10.5px]" src={detailsData.images[2]} fill alt="image" />
+              <Image
+                className="object-cover rounded-[10.5px]"
+                src={detailsData.images[2]}
+                fill
+                alt="image"
+              />
             </div>
             <div className="w-full max-w-96 aspect-square relative">
-              <Image className="object-cover rounded-[10.5px]" src={detailsData.images[3]} fill alt="image" />
+              <Image
+                className="object-cover rounded-[10.5px]"
+                src={detailsData.images[3]}
+                fill
+                alt="image"
+              />
             </div>
           </div>
           <div className="container flex flex-col items-center justify-center mb-44">
             <h1 className="mt-14 text-5xl font-bold">{detailsData.name}</h1>
-            <p className="text-xl text-[#818181] text-center mt-9">{detailsData.desc}
+            <p className="text-xl text-[#818181] text-center mt-9">
+              {detailsData.desc}
             </p>
           </div>
           <Footer />

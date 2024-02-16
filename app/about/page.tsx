@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import heroImage from "@/assets/About-Hero-Image.png";
 import pillars from "@/assets/pillars.png";
+import ProjectSlider from "@/components/Slider/Slider";
 
 function Page() {
   return (
@@ -35,6 +36,7 @@ function Page() {
       </div>
 
       {/* Gallery */}
+      <ProjectSlider />
 
       {/* 5 pillers */}
       <div className="">
