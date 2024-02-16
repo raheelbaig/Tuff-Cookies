@@ -57,7 +57,7 @@ function Page() {
       <div className="h-2 bg-black w-full mt-10 "></div>
       <div className="relative w-full overflow-hidden">
         <div className="w-full whitespace-nowrap animate-marquee font-bold text-5xl mt-[18px] tablet:text-4xl semiLg-mob:text-3xl">
-          STREET ARTIST NATURE FRESHNESS CREATIVITY{" "}
+        Life can be tough, but “A Tuff Cookie never crumbles”{" "}
         </div>
       </div>
       <div className="h-2 bg-black w-full mt-6 "></div>
@@ -66,15 +66,15 @@ function Page() {
         <div className="w-2/3 lg-mob:w-full">
           <div className="w-2/3 lg-mob:w-full">
             <h1 className="font-medium tablet:text-center text-3xl underline underline-offset-4 mb-10 mt-10">
-              LOREM IPSUM TEXT
+            Tuff Cookie
             </h1>
             <p className="text-[#4B4B4B] text-lg tablet:text-center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic
+            Tuff Cookie is a youth arts education company. We focus on aiding
+          mental, social and emotional wellbeing in young people from
+          economically challenging or disadvantaged environments. Through
+          creativity we support young people to explore their identities and
+          build positive relationships in order to develop resilience,
+          confidence, and a sense of purpose.
             </p>
           </div>
         </div>

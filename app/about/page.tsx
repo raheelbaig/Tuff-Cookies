@@ -11,7 +11,7 @@ function Page() {
   return (
     <div className="">
       <Header />
-      <div className="flex items-end justify-center w-full h-[calc(100vh-180px)] bg-cover bg-center bg-no-repeat bg-[url('../assets/About-Hero-Image.png')]">
+      <div className="flex items-end justify-center w-full h-[calc(100vh-110px)] bg-cover bg-center bg-no-repeat bg-[url('../assets/About-Hero-Image.png')]">
         <h1 className="text-7xl text-secondary font-bold pb-20">ABOUT</h1>
       </div>
       <div className="container px-10 mt-20 xs-desktop:mt-10 tablet:mt-7 lg-mob:mt-5 tablet:px-6">
@@ -40,16 +40,16 @@ function Page() {
       <ProjectSlider />
 
       {/* 5 pillers */}
-      <div className=" flex  tablet:flex-col items-center justify-center my-44">
-        <div className="w-2/3 container pl-16">
-          <div className="w-2/3">
-            <p className="font-bold text-[24px] mb-16">
+      <div className=" flex tablet:text-center tablet:flex-col items-center justify-center my-44 tablet:my-0">
+        <div className="w-2/3 tablet:w-full container pl-16 tablet:pl-8">
+          <div className="w-2/3 tablet:w-full">
+            <p className="font-bold text-[24px] mb-16 tablet:mb-8">
               Our Model is built around
             </p>
             <div className=" ">
               <h1 className="text-[#AAAAAA] text-[5.8vw] font-bold ">The</h1>
 
-              <div className="flex items-baseline gap-x-3">
+              <div className="flex items-baseline gap-x-3 tablet:justify-center">
                 <h1 className="text-[#4F2816] text-[5.8vw] font-bold ">5 </h1>
                 <div className="flex items-baseline">
                   <h1 className="text-[#4F2816] text-[5.8vw] font-bold ">
@@ -68,19 +68,19 @@ function Page() {
                 </div>
               </div>
 
-              <h1 className="text-[#AAAAAA] text-[5.5vw] font-bold mb-16">
+              <h1 className="text-[#AAAAAA] text-[5.5vw] font-bold mb-16 tablet:mb-10">
                 of Resilience
               </h1>
             </div>
-            <p className="text-[#4B4B4B] text-lg ">
+            <p className="text-[#4B4B4B] text-lg tablet:mb-10">
               We believe that with personal support and a relatable creative
               education all young people have the potential to thrive.
             </p>
           </div>
         </div>
 
-        <div>
-          <Image src={Circle} alt="Circle" width={410} height={410} />
+        <div className="tablet:mb-20">
+          <Image src={Circle} alt="Circle" width={410} height={410} className=" tablet:h-[300px]" />
         </div>
       </div>
 
