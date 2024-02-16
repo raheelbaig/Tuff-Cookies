@@ -4,15 +4,16 @@ import Image from "next/image";
 import React from "react";
 import heroImage from "@/assets/About-Hero-Image.png";
 import pillars from "@/assets/pillars.png";
+import Circle from "@/assets/5pillarsCircle.png";
 
 function Page() {
   return (
     <div className="">
       <Header />
-      <div className="w-full h-[490px] mb-20">
-        <Image src={heroImage} alt="hero image" />
+      <div className="flex items-end justify-center w-full h-[calc(100vh-180px)] bg-cover bg-center bg-no-repeat bg-[url('../assets/About-Hero-Image.png')]">
+        <h1 className="text-7xl text-secondary font-bold pb-20">ABOUT</h1>
       </div>
-      <div className="container">
+      <div className="container px-10 mt-20 xs-desktop:mt-10 tablet:mt-7 lg-mob:mt-5 tablet:px-6">
         <p className="text-3xl font-bold">
           Life can be tough, but “A Tuff Cookie never crumbles”
         </p>
@@ -37,31 +38,48 @@ function Page() {
       {/* Gallery */}
 
       {/* 5 pillers */}
-      <div className="">
-        <div className="w-2/3 container">
-          <p className="font-bold text-[24px] mb-16">
-            Our Model is built around
-          </p>
-          <div className=" ">
-            <h1 className="text-[#AAAAAA] text-7xl font-bold ">The</h1>
+      <div className=" flex  tablet:flex-col items-center justify-center my-44">
+        <div className="w-2/3 container pl-16">
+          <div className="w-2/3">
+            <p className="font-bold text-[24px] mb-16">
+              Our Model is built around
+            </p>
+            <div className=" ">
+              <h1 className="text-[#AAAAAA] text-[5.8vw] font-bold ">The</h1>
 
-            <div className="flex items-baseline">
-              <h1 className="text-[#4F2816] text-7xl font-bold ">5 P</h1>
-              <Image src={pillars} alt="pillars" width={127} height={65} />
-              <h1 className="text-[#4F2816] text-7xl font-bold ">ARS</h1>
+              <div className="flex items-baseline gap-x-3">
+                <h1 className="text-[#4F2816] text-[5.8vw] font-bold ">5 </h1>
+                <div className="flex items-baseline">
+                  <h1 className="text-[#4F2816] text-[5.8vw] font-bold ">
+                    P
+                  </h1>
+                  <Image
+                    src={pillars}
+                    alt="pillars"
+                    className="aspect-[127/65] w-[8.203vw]"
+                    width={127}
+                    height={65}
+                  />
+                  <h1 className="text-[#4F2816] text-[5.8vw] font-bold ">
+                    ARS
+                  </h1>
+                </div>
+              </div>
+
+              <h1 className="text-[#AAAAAA] text-[5.5vw] font-bold mb-16">
+                of Resilience
+              </h1>
             </div>
-
-            <h1 className="text-[#AAAAAA] text-7xl font-bold mb-16">
-              of Resilience
-            </h1>
+            <p className="text-[#4B4B4B] text-lg ">
+              We believe that with personal support and a relatable creative
+              education all young people have the potential to thrive.
+            </p>
           </div>
-          <p className="text-[#4B4B4B] text-lg ">
-            We believe that with personal support and a relatable creative
-            education all young people have the potential to thrive.
-          </p>
         </div>
 
-        <div></div>
+        <div>
+          <Image src={Circle} alt="Circle" width={410} height={410} />
+        </div>
       </div>
 
       <Footer />

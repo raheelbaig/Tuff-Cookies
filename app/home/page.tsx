@@ -6,56 +6,62 @@ import logo from "@/assets/Logo.png";
 import HomeButton from "@/components/HomeButton";
 import cookie from "@/assets/CookieImage.png";
 import grass from "@/assets/grass.png";
-import style from "./style.module.css"
 import VideoPlayer from "@/components/VideoPlayer";
 
 function Page() {
   return (
-    <>
-      <div>
-        <Image src={heroImage} alt="hero image" width={1536} height={400} />
-      </div>
-      <div className="container">
-        <div className="absolute top-10 w-[180px] h-[80px]">
-          <Image src={logo} alt="logo" />
+    <div>
+      <div className="flex flex-col w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('../assets/homepage_hero.png')]">
+        <div className="px-10 container pt-4">
+          <Image src={logo} alt="logo" width={180} height={80} className="" />
         </div>
-        <div className="absolute top-0 right-0">
-          <Image src={cookie} alt="cookie" />
+        <div className="absolute top-0 right-0 xs-desktop:-top-3 xs-desktop:-right-3 semiLg-mob:hidden">
+          <Image
+            src={cookie}
+            alt="cookie"
+            className="sm-desktop:w-[250px] sm-desktop:h-[180px]"
+          />
         </div>
-        <div className="absolute right-32 bottom-60">
+        <div className="flex flex-1 flex-col px-10 container gap-y-5 justify-end items-end pb-20">
           <HomeButton text="ABOUT" />
-        </div>
-        <div className="absolute right-32 bottom-40">
           <HomeButton text="PROJECTS" />
-        </div>
-        <div className="absolute right-32 bottom-20">
           <HomeButton text="CONTACT" />
         </div>
       </div>
+      {/* <div className="container px-10 tablet:px-6 lg-mob:px-4">
+        <div className="absolute top-0 right-0 ">
+          <Image
+            src={cookie}
+            alt="cookie"
+            className="sm-desktop:w-[250px] sm-desktop:h-[180px]"
+          />
+        </div>
+        <div className="absolute right-32 bottom-60 tablet:bottom-72">
+          <HomeButton text="ABOUT" />
+        </div>
+        <div className="absolute right-32 bottom-40 tablet:bottom-56">
+          <HomeButton text="PROJECTS" />
+        </div>
+        <div className="absolute right-32 bottom-20 tablet:bottom-40">
+          <HomeButton text="CONTACT" />
+        </div>
+      </div> */}
 
       <div className="h-2 bg-black w-full mt-10 "></div>
       <div className="relative w-full overflow-hidden">
-        <div className="w-full whitespace-nowrap animate-marquee font-bold text-5xl mt-[18px]">
+        <div className="w-full whitespace-nowrap animate-marquee font-bold text-5xl mt-[18px] tablet:text-4xl semiLg-mob:3xl">
           STREET ARTIST NATURE FRESHNESS CREATIVITY{" "}
         </div>
       </div>
-      {/* <div className="relative w-full overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap">
-          <span className="inline-block mr-4">
-            Your moving text here. &nbsp;
-          </span>
-          <span className="inline-block">Your moving text here. &nbsp;</span>
-        </div>
-      </div> */}
       <div className="h-2 bg-black w-full mt-6 "></div>
 
-      <div className=" container  flex px-10  gap-x-2 items-start justify-center  my-[110px] mb-16 tablet:flex-col-reverse tablet:items-center tablet:justify-center tablet:my-[65px]">
-        <div className="w-2/3">
-          <div className="w-2/3">
-            <h1 className="font-medium text-3xl underline underline-offset-4 mb-10 mt-10">
+      <div className=" container  flex px-10 lg-mob:px-4  gap-x-2 items-start justify-center  my-[110px] mb-16 tablet:flex-col-reverse tablet:items-center tablet:justify-center tablet:my-[65px]">
+        <div className="w-2/3 lg-mob:w-full">
+          <div className="w-2/3 lg-mob:w-full">
+            <h1 className="font-medium tablet:text-center text-3xl underline underline-offset-4 mb-10 mt-10">
               LOREM IPSUM TEXT
             </h1>
-            <p className="text-[#4B4B4B] text-lg">
+            <p className="text-[#4B4B4B] text-lg tablet:text-center">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -85,7 +91,7 @@ function Page() {
       <div className="w-full h-[100px] mt-32">
         <Image src={grass} alt="footer" />
       </div>
-    </>
+    </div>
   );
 }
 
