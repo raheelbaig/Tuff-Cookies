@@ -22,6 +22,17 @@ html {
   }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(100%); } 
+  100% { transform: translateX(-100%); } 
+}
+.animate-marquee {
+  /* ... other styles */
+  animation-timing-function: linear;  /* Make the animation speed consistent */
+}
+
 .container {
   @apply max-w-screen-xl mx-auto;
 }
+
+

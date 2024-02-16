@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import React from "react";
 import heroImage from "@/assets/About-Hero-Image.png";
+import pillars from "@/assets/pillars.png";
 
 function Page() {
   return (
@@ -35,8 +36,33 @@ function Page() {
 
       {/* Gallery */}
 
-
       {/* 5 pillers */}
+      <div className="">
+        <div className="w-2/3 container">
+          <p className="font-bold text-[24px] mb-16">
+            Our Model is built around
+          </p>
+          <div className=" ">
+            <h1 className="text-[#AAAAAA] text-7xl font-bold ">The</h1>
+
+            <div className="flex items-baseline">
+              <h1 className="text-[#4F2816] text-7xl font-bold ">5 P</h1>
+              <Image src={pillars} alt="pillars" width={127} height={65} />
+              <h1 className="text-[#4F2816] text-7xl font-bold ">ARS</h1>
+            </div>
+
+            <h1 className="text-[#AAAAAA] text-7xl font-bold mb-16">
+              of Resilience
+            </h1>
+          </div>
+          <p className="text-[#4B4B4B] text-lg ">
+            We believe that with personal support and a relatable creative
+            education all young people have the potential to thrive.
+          </p>
+        </div>
+
+        <div></div>
+      </div>
 
       <Footer />
     </div>
