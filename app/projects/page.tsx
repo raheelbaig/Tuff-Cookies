@@ -116,13 +116,6 @@ function Page() {
             setDetailsData(projectData[swiper.snapIndex]);
             console.log("Fainza");
 
-            // if (swiper.snapIndex < 1) {
-            //   // setDisabledArrow("left");
-            // } else if (swiper.isEnd) {
-            //   // setDisabledArrow("right");
-            // } else {
-            //   // setDisabledArrow("none");
-            // }
           }
         }}
       >
@@ -166,11 +159,9 @@ function Page() {
 
       {/* Details */}
       {isExpanded && detailsData !== null && (
-        <div
-          className={`container flex flex-col   px-10 mt-40 tablet:px-3 tablet:mt-9`}
-        >
-          <div className="container flex lg-mob:flex-wrap gap-y-4 items-center tablet:justify-center justify-between tablet:gap-x-3 gap-x-10 ">
-            <div className="w-full max-w-96 lg-mob:max-w-72 aspect-square relative">
+        <div className={`container  px-10 mt-52 tablet:px-3 tablet:mt-9`}>
+          <div className="container flex items-center justify-between tablet:gap-x-3 gap-x-10">
+            <div className="w-full max-w-96 aspect-square relative">
               <Image
                 className="object-cover rounded-[10.5px]"
                 src={detailsData.images[1]}
@@ -178,7 +169,7 @@ function Page() {
                 alt="image"
               />
             </div>
-            <div className="w-full max-w-96 lg-mob:max-w-72 aspect-square relative">
+            <div className="w-full max-w-96 aspect-square relative">
               <Image
                 className="object-cover rounded-[10.5px]"
                 src={detailsData.images[2]}
@@ -186,7 +177,7 @@ function Page() {
                 alt="image"
               />
             </div>
-            <div className="w-full max-w-96 lg-mob:max-w-72 aspect-square relative">
+            <div className="w-full max-w-96 aspect-square relative">
               <Image
                 className="object-cover rounded-[10.5px]"
                 src={detailsData.images[3]}
@@ -196,10 +187,8 @@ function Page() {
             </div>
           </div>
           <div className="container flex flex-col items-center justify-center mb-44">
-            <h1 className="mt-14 text-5xl font-bold md-mob:text-4xl">
-              {detailsData.name}
-            </h1>
-            <p className="text-xl text-[#818181] text-center mt-9 md-mob:text-lgs">
+            <h1 className="mt-14 text-5xl font-bold">{detailsData.name}</h1>
+            <p className="text-xl text-[#818181] text-center mt-9">
               {detailsData.desc}
             </p>
           </div>
