@@ -18,8 +18,9 @@ const config: Config = {
         },
       },
       colors: {
-        primary: "var(--primary)" /* #BE4952 */,
-        secondary: "var(--secondary)" /* #770077 */,
+        primary: "var(--primary)" /* #4f2816 */,
+        secondary: "var(--secondary)" /* #c28840 */,
+        
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
