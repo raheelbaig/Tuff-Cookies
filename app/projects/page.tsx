@@ -44,8 +44,8 @@ function Page() {
             Project Name
           </h1>
           <>
-            <button onClick={handleClick}>
-              <div className="flex items-center justify-between px-1 h-[45px] w-[160px] bg-secondary rounded-[60px] cursor-pointer">
+            <button onClick={handleClick} className="">
+              <div className="flex items-center justify-between box-content px-1 h-[45px] w-[160px] bg-secondary rounded-[60px] cursor-pointer ">
                 <div></div>
                 <p className="text-lg font-semibold">
                   {isExpanded ? "See Less" : "See More"}
