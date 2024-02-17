@@ -1,0 +1,44 @@
+.container {
+  position: absolute;
+  right: -4%;
+  top: -22%;
+  width: 400px;
+}
+.blue_circle_image {
+  width: 400px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  animation: rotateImage 20s infinite linear;
+}
+.orange_circle_image,
+.cookie_image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 78%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.orange_circle_image {
+  width: 85%;
+  animation: rotateImage 20s infinite linear reverse;
+}
+
+@media screen and (max-width: 1024px) {
+  .blue_circle_image {
+    width: 290px;
+  }
+  .container {
+    right: -4%;
+    top: -18%;
+    width: 290px;
+  }
+}
+
+@keyframes rotateImage {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,3 +1,4 @@
+import InfiniteRotationCookie from "@/components/Infinite-Cookie-Rotation";
 import React from "react";
 
 function page() {
@@ -9,6 +10,7 @@ function page() {
             Coming Soon...
           </h1>
         </div>
+        <InfiniteRotationCookie />
       </div>
     </div>
   );

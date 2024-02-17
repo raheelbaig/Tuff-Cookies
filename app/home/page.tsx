@@ -8,6 +8,7 @@ import cookie from "@/assets/CookieImage.png";
 import grass from "@/assets/grass.png";
 import VideoPlayer from "@/components/VideoPlayer";
 import Link from "next/link";
+import InfiniteRotationCookie from "@/components/Infinite-Cookie-Rotation";
 
 function Page() {
   return (
@@ -16,13 +17,9 @@ function Page() {
         <div className="px-10 container pt-4">
           <Image src={logo} alt="logo" width={180} height={80} className="" />
         </div>
-        <div className="absolute top-0 right-0 xs-desktop:-top-3 xs-desktop:-right-3 semiLg-mob:hidden">
-          <Image
-            src={cookie}
-            alt="cookie"
-            className="sm-desktop:w-[250px] sm-desktop:h-[180px]"
-          />
-        </div>
+
+        <InfiniteRotationCookie />
+
         <div className="flex flex-1 flex-col px-10 container gap-y-5 justify-end items-end pb-20">
           <Link href="/about">
             <HomeButton text="ABOUT" />
@@ -57,7 +54,7 @@ function Page() {
       <div className="h-2 bg-black w-full mt-10 "></div>
       <div className="relative w-full overflow-hidden">
         <div className="w-full whitespace-nowrap animate-marquee font-bold text-5xl mt-[18px] tablet:text-4xl semiLg-mob:text-3xl">
-        Life can be tough, but “A Tuff Cookie never crumbles”{" "}
+          Life can be tough, but “A Tuff Cookie never crumbles”{" "}
         </div>
       </div>
       <div className="h-2 bg-black w-full mt-6 "></div>
@@ -66,15 +63,15 @@ function Page() {
         <div className="w-2/3 lg-mob:w-full">
           <div className="w-2/3 lg-mob:w-full">
             <h1 className="font-medium tablet:text-center text-3xl underline underline-offset-4 mb-10 mt-10">
-            Tuff Cookie
+              Tuff Cookie
             </h1>
             <p className="text-[#4B4B4B] text-lg tablet:text-center">
-            Tuff Cookie is a youth arts education company. We focus on aiding
-          mental, social and emotional wellbeing in young people from
-          economically challenging or disadvantaged environments. Through
-          creativity we support young people to explore their identities and
-          build positive relationships in order to develop resilience,
-          confidence, and a sense of purpose.
+              Tuff Cookie is a youth arts education company. We focus on aiding
+              mental, social and emotional wellbeing in young people from
+              economically challenging or disadvantaged environments. Through
+              creativity we support young people to explore their identities and
+              build positive relationships in order to develop resilience,
+              confidence, and a sense of purpose.
             </p>
           </div>
         </div>
