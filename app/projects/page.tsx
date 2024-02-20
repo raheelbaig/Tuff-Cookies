@@ -172,7 +172,7 @@ import { TfiAngleRight,TfiAngleLeft } from "react-icons/tfi";function Page() {
       >
         {projectData.map((data, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={data.name + index}>
               <div className="relative h-[calc(100vh-174px)] bg-black">
                 <Image
                   className="object-cover"
