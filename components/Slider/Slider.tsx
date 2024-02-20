@@ -15,15 +15,13 @@ import style from "./style.module.css";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 export default function ProjectSlider() {
-  const [currentSlideIndex,setCurrentSlideIndex] = useState(0)
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   return (
     <div className="my-20">
       <Swiper
-
-       onSlideChange={(swiper)=>{
-        setCurrentSlideIndex((swiper.realIndex))
-
-       }}
+        onSlideChange={(swiper) => {
+          setCurrentSlideIndex(swiper.realIndex);
+        }}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -41,10 +39,18 @@ export default function ProjectSlider() {
         {Array.from({ length: 12 }).map((data, index) => {
           return (
             <SwiperSlide
-            className={style.swiperSlider}
-            style={{ width: "300px", height: "300px" }}
+              key={index + "key"}
+              className={style.swiperSlider}
+              style={{ width: "300px", height: "300px" }}
             >
-              <img className={currentSlideIndex === index ? style.activeSlide : style.defaultSlide} src={`/Projects/All/sample-${index+1}.jpg`} />
+              <img
+                className={
+                  currentSlideIndex === index
+                    ? style.activeSlide
+                    : style.defaultSlide
+                }
+                src={`/Projects/All/sample-${index + 1}.jpg`}
+              />
             </SwiperSlide>
           );
         })}

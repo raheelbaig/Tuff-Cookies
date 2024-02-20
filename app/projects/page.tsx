@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import dots from "@/assets/buttonDot.png";
 import logo from "@/assets/Logo.png";
 import HeroImage from "@/assets/project-hero-Image.png";
@@ -17,7 +17,12 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide, SwiperRef, useSwiper } from "swiper/react";
 import projectData from "@/data.json";
 import Link from "next/link";
-function Page() {
+import { TfiAngleRight,TfiAngleLeft } from "react-icons/tfi";function Page() {
+  const swiperRef = useRef<SwiperRef>(null);
+  const [disableArrow, setDisabledArrow] = useState<"left" | "none" | "right">(
+    "left"
+  );
+
   const [isExpanded, setIsExpanded] = useState(false);
   const [detailsData, setDetailsData] = useState<{
     name: string;
@@ -38,6 +43,22 @@ function Page() {
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
+  };
+
+  const sliderHandler = (swipeType: "left" | "right") => {
+    if (swiperRef.current !== null) {
+      const { swiper } = swiperRef.current;
+
+      if (swipeType === "right") {
+        if (swiper.isEnd === false) {
+          swiper.slideNext();
+        }
+      } else {
+        if (swiper.snapIndex > 0) {
+          swiper.slidePrev();
+        }
+      }
+    }
   };
 
   return (
@@ -110,18 +131,48 @@ function Page() {
         )}
       </div>
       <Swiper
+      ref={swiperRef}
         spaceBetween={20}
         onSlideChange={(swiper) => {
           if (isExpanded) {
             setDetailsData(projectData[swiper.snapIndex]);
-            console.log("Fainza");
-
+          }
+          if (swiper.snapIndex < 1) {
+            setDisabledArrow("left");
+          } else if (swiper.isEnd) {
+            setDisabledArrow("right");
+          } else {
+            setDisabledArrow("none");
           }
         }}
+        className="relative"
       >
+        {/* Left Arrow Button */}
+
+        <button
+          onClick={() => {
+            sliderHandler("left");
+          }}
+          disabled={disableArrow === "left" ? true : false}
+          className={`cursor-pointer w-16 aspect-square rounded-full flex justify-center items-center z-20  top-1/2 -translate-y-1/2 left-10 bg-[#4f2816cb] absolute disabled:opacity-50 disabled:cursor-auto`}
+        >
+          <TfiAngleLeft color="#fff" size={32} />
+        </button>
+
+        {/* Right Arrow Button */}
+        <button
+          onClick={() => {
+            sliderHandler("right");
+          }}
+          disabled={disableArrow === "right" ? true : false}
+          className={`cursor-pointer w-16 aspect-square rounded-full flex justify-center items-center z-20 top-1/2 -translate-y-1/2 right-10 bg-[#4f2816cb] absolute disabled:opacity-50 disabled:cursor-auto`}
+        >
+          <TfiAngleRight color="#fff" size={32} />
+        </button>
+
         {projectData.map((data, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={data.name + index}>
               <div className="relative h-[calc(100vh-174px)] bg-black">
                 <Image
                   className="object-cover"
@@ -132,7 +183,7 @@ function Page() {
 
                 <span className="bg-gradient-to-b from-transparent to-black/50 absolute inset-0 " />
                 <div className="absolute inset-x-0 bottom-20 z-50">
-                  <h1 className="text-[48px] text-[#FFC680] text-center font-semibold text-secondary">
+                  <h1 className="text-[48px] text-[#FFC680] text-center font-semibold">
                     {data.name}
                   </h1>
                 </div>
@@ -163,7 +214,7 @@ function Page() {
           <div className="container flex items-center justify-between tablet:gap-x-3 gap-x-10">
             <div className="w-full max-w-96 aspect-square relative">
               <Image
-                className="object-cover rounded-[10.5px]"
+                className="object-cover rounded-[10.5px] bg-slate-300"
                 src={detailsData.images[1]}
                 fill
                 alt="image"
@@ -171,7 +222,7 @@ function Page() {
             </div>
             <div className="w-full max-w-96 aspect-square relative">
               <Image
-                className="object-cover rounded-[10.5px]"
+                className="object-cover rounded-[10.5px] bg-slate-300"
                 src={detailsData.images[2]}
                 fill
                 alt="image"
@@ -179,7 +230,7 @@ function Page() {
             </div>
             <div className="w-full max-w-96 aspect-square relative">
               <Image
-                className="object-cover rounded-[10.5px]"
+                className="object-cover rounded-[10.5px] bg-slate-300"
                 src={detailsData.images[3]}
                 fill
                 alt="image"

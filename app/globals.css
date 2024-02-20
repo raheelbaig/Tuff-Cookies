@@ -30,7 +30,10 @@ html {
   @apply max-w-screen-xl mx-auto;
 }
 
-
+.outlined-text{
+  color:#fff;
+  -webkit-text-stroke: 4px #EEA954;
+}
 
 
 

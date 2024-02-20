@@ -14,6 +14,19 @@
     ]
   },
   {
+    "name": "Graffiti Intro Workshops",
+    "desc": "We run these 1 - 3 hour graffiti intro workshops regularly, teaching basic spray paint techniques and culminating in individual pieces that participants can take home. Workshops usually focus on 'space-painting', lettering or stencils.",
+    "images": [
+      "/Projects/Graffiti_Workshops/Main.jpg",
+      "/Projects/Graffiti_Workshops/Ref-1.jpg",
+      "/Projects/Graffiti_Workshops/Ref-2.jpg",
+      "/Projects/Graffiti_Workshops/Ref-3.jpg"
+    ],
+    "quotes": [
+      "It was really enjoyable and it taught me a new skill that I hadn't tried before, and I've been doing it outside of school since then. I even got my own spray paints to do my own art at home.” - Workshop Participant"
+    ]
+  },
+  {
     "name": "Plumstead Mural",
     "desc": "Dan worked with 10-year-old Timon who won the Plumstead Mural competition, to design and paint a large scale mural on the outside wall of Plumstead Library. Commissioned by Greenwich Council and Tramshed Arts, led by Dan.",
     "images": [
@@ -28,11 +41,83 @@
     "name": "Growffiti Project",
     "desc": "Participants from Edinburgh Young Carers developed a youth allotment area at Bridgend Community Farmhouse, developing skills in graffiti techniques and food growing while being supported to access, participate and feel a sense of belonging at Bridgend. This project had a strong wellbeing focus, evolving the aims and outcomes in alignment with participant needs and interests.",
     "images": [
-        "/Projects/Growffiti/Main.jpg",
-        "/Projects/Growffiti/Ref-1.jpg",
-        "/Projects/Growffiti/Ref-2.jpg",
-        "/Projects/Growffiti/Ref-3.jpg"
-      ],
+      "/Projects/Growffiti/Main.jpg",
+      "/Projects/Growffiti/Ref-1.jpg",
+      "/Projects/Growffiti/Ref-2.jpg",
+      "/Projects/Growffiti/Ref-3.jpg"
+    ],
+    "quotes": []
+  },
+  {
+    "name": "Youth Takeover",
+    "desc": "A day of drop-in graffiti workshops for groups of young people in Greenwich Park. In collaboration with Tramshed Arts.",
+    "images": [
+      "/Projects/Youth_Takeover/Main.jpg",
+      "/Projects/Youth_Takeover/Ref-1.jpg",
+      "/Projects/Youth_Takeover/Ref-2.jpg",
+      "/Projects/Youth_Takeover/Ref-3.jpg"
+    ],
+    "quotes": []
+  },
+  {
+    "name": "The Concrete Garden Project",
+    "desc": "A student-run garden project over two years at Hampstead Secondary School, visioned and developed with pupils age 11-14, in collaboration with departments across the school. Students designed and built their own outdoor classroom, with a legacy as an ongoing educational resource for cross-curricular and practical learning in the school. Led by Susannah, with support from Claude Oprea (permaculture teacher) and Edible Landscapes.",
+    "images": [
+      "/Projects/Concrete_Garden/Main.jpg",
+      "/Projects/Concrete_Garden/Ref-1.jpg",
+      "/Projects/Concrete_Garden/Ref-2.jpg",
+      "/Projects/Concrete_Garden/Ref-3.jpg"
+    ],
+    "quotes": []
+  },
+  {
+    "name": "The Handover Project",
+    "desc": "Over 100 Hampstead School students came together to produce an album of music about personal experiences and issues that matter to them. Students went on to direct their own music video and develop a marketing campaign for the album. This project was facilitated by 12 creative professionals from diverse artistic and cultural backgrounds, who were able to guide and empower the young people in their creative process. Led by Susannah. Music video by Dorothy Allen-Pickard, music workshop facilitated by Faisal Salah.                                                                                                      ",
+    "images": [
+      "/Projects/Handover/Main.png",
+      "/Projects/Handover/Ref-1.png",
+      "/Projects/Handover/Ref-2.png",
+      "/Projects/Handover/Ref-3.png"
+    ],
+    "quotes": [
+      "This has genuinely been the most valuable and enriching experience I have ever had at Hampstead. Faisal, Marv and James were engaging, inspirational and positive, which led to students feeling motivated, included and valued. There was a real mix of students in both sessions but all were engaged and had the opportunity to be part of something. It was so wonderful to see students who have never been interested in the past, singing, beatboxing and clapping! I believe that students will leave today with a different perspective, feeling inspired and with a huge amount of positivity - not just about music, but about life! This has been the most exceptional day. Can you please come back?!.                                                                                                      "
+    ]
+  },
+  {
+    "name": "Enrichment Day",
+    "desc": "Two enrichment days at Hampstead School introduced year 9 students to exciting new ideas and interests. Workshops were led by local creatives and practitioners, and included mosaic making, bicycle powered machines, bread baking, permaculture, painting patterns in nature, and protest art. Led by Susannah.",
+    "images": [
+      "/Projects/Enrichment_Day/Main.jpg",
+      "/Projects/Enrichment_Day/Ref-1.jpg",
+      "/Projects/Enrichment_Day/Ref-2.jpg",
+      "/Projects/Enrichment_Day/Ref-3.jpg"
+    ],
+    "quotes": [
+      "It was very creative and very amazing. I have never experienced a lesson that can make me more confident about who I am and more passionate about what I do.",
+      "Students were engaged, directing their own learning. Real learning was happening. There was freedom to learn without an agenda.",
+      "This hasn't just been the most enriching day I've ever experienced at Hampstead School; this has been the most enriching day of my life!"
+    ]
+  },
+  {
+    "name": "Girls Bike Project",
+    "desc": "Young people on the 'community cycle works' program will design and create a logo for their local",
+    "images": [
+      "/Projects/Girls_Bike/Main.jpg",
+      "/Projects/Girls_Bike/Ref-1.jpg",
+      "/Projects/Girls_Bike/Ref-2.jpg",
+      "/Projects/Girls_Bike/Ref-3.jpg"
+    ],
+    "quotes": []
+  },
+  {
+    "name": "CATE Mural",
+    "desc": "community cycle project 'Girls Bike 2' ",
+    "images": [
+      "/Projects/CATE_Mural/Main.jpg",
+      "/Projects/CATE_Mural/Ref-1.jpg",
+      "/Projects/CATE_Mural/Ref-2.jpg",
+      "/Projects/CATE_Mural/Ref-3.jpg"
+    ],
     "quotes": []
   }
 ]

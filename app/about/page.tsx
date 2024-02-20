@@ -12,7 +12,7 @@ function Page() {
     <div className="">
       <Header />
       <div className="flex items-end justify-center w-full h-[calc(100vh-110px)] bg-cover bg-center bg-no-repeat bg-[url('../assets/About-Hero-Image.png')]">
-        <h1 className="text-7xl text-secondary font-bold pb-20">ABOUT</h1>
+        <h1 className="text-7xl outlined-text font-sans font-bold pb-20">ABOUT</h1>
       </div>
       <div className="container px-10 mt-20 xs-desktop:mt-10 tablet:mt-7 lg-mob:mt-5 tablet:px-6">
         <p className="text-3xl font-bold mb-5">
