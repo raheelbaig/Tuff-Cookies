@@ -19,7 +19,8 @@ import { FaAngleDown } from "react-icons/fa6";
 import { Swiper, SwiperSlide, SwiperRef, useSwiper } from "swiper/react";
 import projectData from "@/data.json";
 import Link from "next/link";
-import { TfiAngleRight,TfiAngleLeft } from "react-icons/tfi";function Page() {
+import { TfiAngleRight, TfiAngleLeft } from "react-icons/tfi";
+function Page() {
   const swiperRef = useRef<SwiperRef>(null);
   const [disableArrow, setDisabledArrow] = useState<"left" | "none" | "right">(
     "left"
@@ -131,12 +132,16 @@ import { TfiAngleRight,TfiAngleLeft } from "react-icons/tfi";function Page() {
                   Contact
                 </button>
               </Link>
-              <button 
+              <button
                 className="flex items-center justify-center text-white text-[20px] font-semibold rounded-lg mt-4 gap-x-8"
                 onClick={toggleprojects}
               >
                 Projects
-                 <FaAngleDown className={` transition-transform duration-300 mt-1 ${isProjectsOpen ? "rotate-180" : "rotate-0"}`} />
+                <FaAngleDown
+                  className={` transition-transform duration-300 mt-1 ${
+                    isProjectsOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                />
               </button>
               {isProjectsOpen && (
                 <div className="flex flex-col gap-y-2 px-3">
@@ -161,15 +166,45 @@ import { TfiAngleRight,TfiAngleLeft } from "react-icons/tfi";function Page() {
         )}
       </div>
       <Swiper
-      ref={swiperRef}
+        ref={swiperRef}
         spaceBetween={20}
         onSlideChange={(swiper) => {
           if (isExpanded) {
             setDetailsData(projectData[swiper.snapIndex]);
-
+          }
+          if (swiper.snapIndex < 1) {
+            setDisabledArrow("left");
+          } else if (swiper.isEnd) {
+            setDisabledArrow("right");
+          } else {
+            setDisabledArrow("none");
           }
         }}
+        className="relative"
       >
+        {/* Left Arrow Button */}
+
+        <button
+          onClick={() => {
+            sliderHandler("left");
+          }}
+          disabled={disableArrow === "left" ? true : false}
+          className={`cursor-pointer w-16 aspect-square rounded-full flex justify-center items-center z-20  top-1/2 -translate-y-1/2 left-10 bg-[#4f2816cb] absolute disabled:opacity-50 disabled:cursor-auto`}
+        >
+          <TfiAngleLeft color="#fff" size={32} />
+        </button>
+
+        {/* Right Arrow Button */}
+        <button
+          onClick={() => {
+            sliderHandler("right");
+          }}
+          disabled={disableArrow === "right" ? true : false}
+          className={`cursor-pointer w-16 aspect-square rounded-full flex justify-center items-center z-20 top-1/2 -translate-y-1/2 right-10 bg-[#4f2816cb] absolute disabled:opacity-50 disabled:cursor-auto`}
+        >
+          <TfiAngleRight color="#fff" size={32} />
+        </button>
+
         {projectData.map((data, index) => {
           return (
             <SwiperSlide key={data.name + index}>
