@@ -41,6 +41,7 @@ export default function ProjectSlider() {
         {Array.from({ length: 12 }).map((data, index) => {
           return (
             <SwiperSlide
+            key={index}
             className={style.swiperSlider}
             style={{ width: "300px", height: "300px" }}
             >

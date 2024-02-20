@@ -13,6 +13,8 @@ import Footer from "@/components/Footer";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import { FaAngleUp } from "react-icons/fa6";
+import { FaAngleDown } from "react-icons/fa6";
 
 import { Swiper, SwiperSlide, SwiperRef, useSwiper } from "swiper/react";
 import projectData from "@/data.json";
@@ -35,39 +37,46 @@ function Page() {
   };
 
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
+  const toggleprojects = () => {
+    setIsProjectsOpen(!isProjectsOpen);
+  };
+
   return (
     <div className="overflow-hidden">
       {/* Header */}
-      <div className="container flex items-center justify-between px-10 tablet:px-4">
-        <Link href="/contact">
-          <button className="bg-[#C28840] tablet:hidden w-[235px] h-[57px] py-2 px-4 text-white text-[22px] font-bold rounded-lg">
-            Start a Project
-          </button>
-        </Link>
-        <div className="flex flex-col items-center justify-center gap-y-8 py-6">
-          <Image src={logo} alt="logo" width={150} height={65} />
-          <div className="flex gap-x-5 text-primary  text-lg tablet:hidden">
-            <Link href="/home">
-              <button className="hover:font-bold">Home</button>
-            </Link>
-            <Link href="/about">
-              <button className="hover:font-bold">About</button>
-            </Link>
-            <Link href="/contact">
-              <button className="hover:font-bold">Contact</button>
-            </Link>
+      <div className="container flex items-center justify-between  px-10 tablet:px-8">
+        <div className="flex items-center justify-between w-full tablet:justify-start">
+          <Link href="/contact">
+            <button className="bg-[#C28840] tablet:hidden w-[235px] h-[57px] py-2 px-4 text-white text-[22px] font-bold rounded-lg">
+              Start a Project
+            </button>
+          </Link>
+          <div className="flex flex-col items-center justify-center gap-y-8 py-6">
+            <Image src={logo} alt="logo" width={150} height={65} />
+            <div className="flex gap-x-5 text-primary  text-lg tablet:hidden">
+              <Link href="/home">
+                <button className="hover:font-bold">Home</button>
+              </Link>
+              <Link href="/about">
+                <button className="hover:font-bold">About</button>
+              </Link>
+              <Link href="/contact">
+                <button className="hover:font-bold">Contact</button>
+              </Link>
+            </div>
           </div>
+          <Link href="/contact">
+            <button className="bg-[#C28840] tablet:hidden w-[235px] h-[57px] py-2 px-4 text-white text-[22px] font-bold rounded-lg">
+              Workshops
+            </button>
+          </Link>{" "}
         </div>
-        <Link href="/contact">
-          <button className="bg-[#C28840] tablet:hidden w-[235px] h-[57px] py-2 px-4 text-white text-[22px] font-bold rounded-lg">
-            Workshops
-          </button>
-        </Link>
         <button
           onClick={toggleNav}
           className=" md:hidden focus:outline-none space-y-10"
@@ -80,32 +89,54 @@ function Page() {
           )}
         </button>
         {isNavOpen && (
-          <div className="absolute  flex flex-col items-start z-10 right-10 top-3 mt-16 p-4 gap-y-6 bg-[#C28840] text-white w-56 rounded-lg transition-all duration-200 shadow-md">
-            <Link href="/home">
-              <button className="  text-white text-[20px] font-semibold rounded-lg">
-                Home
+          <div className="absolute flex flex-col items-center justify-center z-20 right-0 top-0 p-4 gap-y-6 bg-[#C28840] text-white w-[40%] h-full md:hidden transition-all duration-200 shadow-md">
+            <div className="absolute top-4 right-4">
+              <button onClick={toggleNav}>
+                <RxCross1 size={25} color="white" />
               </button>
-            </Link>
-            <Link href="/about">
-              <button className="  text-white text-[20px] font-semibold rounded-lg">
-                About
+            </div>
+            <div className="w-[75%] flex flex-col items-start justify-center gap-y-4">
+              <Link href="/home">
+                <button className="  text-white text-[20px] font-semibold rounded-lg">
+                  Home
+                </button>
+              </Link>
+              <Link href="/about">
+                <button className="  text-white text-[20px] font-semibold rounded-lg">
+                  About
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="  text-white text-[20px] font-semibold rounded-lg">
+                  Contact
+                </button>
+              </Link>
+              <button 
+                className="flex items-center justify-center text-white text-[20px] font-semibold rounded-lg mt-4 gap-x-8"
+                onClick={toggleprojects}
+              >
+                Projects
+                 <FaAngleDown className={` transition-transform duration-300 mt-1 ${isProjectsOpen ? "rotate-180" : "rotate-0"}`} />
               </button>
-            </Link>
-            <Link href="/contact">
-              <button className="  text-white text-[20px] font-semibold rounded-lg">
-                Contact
-              </button>
-            </Link>
-            <Link href="/contact">
-              <button className="  text-white text-[20px] font-semibold rounded-lg">
-                Start a Project
-              </button>
-            </Link>
-            <Link href="/contact">
-              <button className="  text-white text-[20px] font-semibold rounded-lg">
-                Workshops
-              </button>
-            </Link>
+              {isProjectsOpen && (
+                <div className="flex flex-col gap-y-2 px-3">
+                  <div>
+                    <Link href="/contact">
+                      <button className="  text-white text-[20px] font-semibold rounded-lg">
+                        Start a Project
+                      </button>
+                    </Link>
+                  </div>
+                  <div>
+                    <Link href="/contact">
+                      <button className="  text-white text-[20px] font-semibold rounded-lg">
+                        Workshops
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>
@@ -115,13 +146,12 @@ function Page() {
           if (isExpanded) {
             setDetailsData(projectData[swiper.snapIndex]);
             console.log("Fainza");
-
           }
         }}
       >
         {projectData.map((data, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <div className="relative h-[calc(100vh-174px)] bg-black">
                 <Image
                   className="object-cover"
