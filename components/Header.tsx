@@ -14,6 +14,7 @@ function Header() {
   };
   return (
     <div className="container flex flex-col items-center justify-center gap-y-10 py-6 tablet:gap-5 tablet:py-3 tablet:flex-row tablet:justify-between px-8">
+      <Link href="/">
       <Image
         src={logo}
         alt="logo"
@@ -21,6 +22,7 @@ function Header() {
         height={65}
         className="tablet:w-[90px] aspect-[70/30] object-contain "
       />
+      </Link>
       <div className="flex gap-x-5 tablet:gap-x-4 text-primary  text-lg tablet:hidden">
         <Link href="home tablet:hidden">
           <button className="hover:font-bold tablet:text-base">Home</button>
@@ -30,6 +32,9 @@ function Header() {
         </Link>
         <Link href="contact">
           <button className="hover:font-bold tablet:text-base">Contact</button>
+        </Link>
+        <Link href="projects">
+          <button className="hover:font-bold tablet:text-base">Projects</button>
         </Link>
       </div>
       <div>
@@ -66,6 +71,11 @@ function Header() {
             <Link href="/contact">
               <button className="  text-white text-[20px] font-semibold rounded-lg">
                 Contact
+              </button>
+            </Link>
+            <Link href="/projects">
+              <button className="  text-white text-[20px] font-semibold rounded-lg">
+                Projects
               </button>
             </Link>
           </div>

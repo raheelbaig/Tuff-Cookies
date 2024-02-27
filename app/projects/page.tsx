@@ -83,7 +83,9 @@ function Page() {
             </button>
           </Link>
           <div className="flex flex-col items-center justify-center gap-y-8 py-6">
+            <Link href="/">
             <Image src={logo} alt="logo" width={150} height={65} />
+            </Link>
             <div className="flex gap-x-5 text-primary  text-lg tablet:hidden">
               <Link href="/home">
                 <button className="hover:font-bold">Home</button>
@@ -93,6 +95,9 @@ function Page() {
               </Link>
               <Link href="/contact">
                 <button className="hover:font-bold">Contact</button>
+              </Link>
+              <Link href="/projects">
+                <button className="hover:font-bold">Projects</button>
               </Link>
             </div>
           </div>

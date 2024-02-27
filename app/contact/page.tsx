@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import React, { useState } from "react";
 import heroImage from "@/assets/contact-hero-image.png";
+import dots from "@/assets/buttonDot.png";
 
 // Logos
 import { FaFacebook } from "react-icons/fa";
@@ -38,13 +39,14 @@ function Page() {
               </p>
               <p className="text-primary font-semibold text-xl mb-11 tablet:text-lg tablet:text-center">
                 Email:{" "}
-                <button onClick={handleModalDisplay}>
+                <button>
                   <span className="text-[#818181] border-b-2 border-[#818181] py-0.5">
                     Heyteam@tuffcookiearts.com
                   </span>
                 </button>
               </p>
-              <div className="flex gap-x-4 tablet:items-center tablet:justify-center tablet:gap-x-3">
+
+              <div className="flex gap-x-4 tablet:items-center tablet:justify-center tablet:gap-x-3 ">
                 <button className="flex items-center justify-center w-[60px] h-[60px] tablet:w-[50px] tablet:h-[50px] bg-[#FFC680] rounded-2xl">
                   <FaFacebook
                     size={30}
@@ -79,6 +81,17 @@ function Page() {
                     color="#4F2816"
                     className="tablet:w-[25px] tablet:h-[25px]"
                   />
+                </button>
+              </div>
+              <div className="flex w-full tablet:items-center tablet:justify-center">
+                <button className="mt-11" onClick={handleModalDisplay}>
+                  <div className="flex items-center justify-between   px-1 h-[45px] w-[200px] py-5 bg-[#FFC680] rounded-[60px] cursor-pointer hover:border-4 hover:border-secondary xs-desktop:h-[40px] xs-desktop:w-[190px]">
+                    <div></div>
+                    <p className="text-lg font-semibold">Contact Us</p>
+                    <div className="w-[22px] h-[36px]">
+                      <Image src={dots} alt="dots" />
+                    </div>
+                  </div>
                 </button>
               </div>
             </div>
@@ -123,6 +136,17 @@ function Page() {
             ></textarea>
           </div>
         </Modal.Body>
+        <Modal.Footer>
+          <button className="" onClick={handleModalDisplay}>
+            <div className="flex items-center justify-between px-1 h-[45px] w-[150px] py-5 bg-[#FFC680] rounded-[60px] cursor-pointer hover:border-4 hover:border-secondary xs-desktop:h-[40px] xs-desktop:w-[150px]">
+              
+              <p className="text-lg font-semibold pl-5">Submit</p>
+              <div className="w-[22px] h-[36px]">
+                <Image src={dots} alt="dots" />
+              </div>
+            </div>
+          </button>
+        </Modal.Footer>
       </Modal.Container>
     </>
   );
