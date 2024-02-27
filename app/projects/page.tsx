@@ -22,9 +22,7 @@ import Link from "next/link";
 import { TfiAngleRight, TfiAngleLeft } from "react-icons/tfi";
 function Page() {
   const swiperRef = useRef<SwiperRef>(null);
-  const [disableArrow, setDisabledArrow] = useState<"left" | "none" | "right">(
-    "left"
-  );
+  
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [detailsData, setDetailsData] = useState<{
@@ -59,10 +57,16 @@ function Page() {
       if (swipeType === "right") {
         if (swiper.isEnd === false) {
           swiper.slideNext();
+        }else{
+          swiper.slideToLoop(0)
+
         }
       } else {
         if (swiper.snapIndex > 0) {
           swiper.slidePrev();
+        }else{
+          swiper.slideToLoop(projectData.length - 1)
+
         }
       }
     }
@@ -172,13 +176,6 @@ function Page() {
           if (isExpanded) {
             setDetailsData(projectData[swiper.snapIndex]);
           }
-          if (swiper.snapIndex < 1) {
-            setDisabledArrow("left");
-          } else if (swiper.isEnd) {
-            setDisabledArrow("right");
-          } else {
-            setDisabledArrow("none");
-          }
         }}
         className="relative"
       >
@@ -188,8 +185,7 @@ function Page() {
           onClick={() => {
             sliderHandler("left");
           }}
-          disabled={disableArrow === "left" ? true : false}
-          className={`cursor-pointer w-16 aspect-square rounded-full flex justify-center items-center z-20  top-1/2 -translate-y-1/2 left-10 bg-[#4f2816cb] absolute disabled:opacity-50 disabled:cursor-auto`}
+          className={`cursor-pointer w-16 aspect-square rounded-full flex justify-center items-center z-20  top-1/2 -translate-y-1/2 left-10 bg-[#4f2816cb] absolute`}
         >
           <TfiAngleLeft color="#fff" size={32} />
         </button>
@@ -199,8 +195,8 @@ function Page() {
           onClick={() => {
             sliderHandler("right");
           }}
-          disabled={disableArrow === "right" ? true : false}
-          className={`cursor-pointer w-16 aspect-square rounded-full flex justify-center items-center z-20 top-1/2 -translate-y-1/2 right-10 bg-[#4f2816cb] absolute disabled:opacity-50 disabled:cursor-auto`}
+          
+          className={`cursor-pointer w-16 aspect-square rounded-full flex justify-center items-center z-20 top-1/2 -translate-y-1/2 right-10 bg-[#4f2816cb] absolute`}
         >
           <TfiAngleRight color="#fff" size={32} />
         </button>

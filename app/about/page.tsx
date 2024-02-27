@@ -6,13 +6,14 @@ import heroImage from "@/assets/About-Hero-Image.png";
 import pillars from "@/assets/pillars.png";
 import ProjectSlider from "@/components/Slider/Slider";
 import Circle from "@/assets/5pillarsCircle.png";
+import AboutText from "@/assets/about-text.svg"
 
 function Page() {
   return (
     <div className="">
       <Header />
       <div className="flex items-end justify-center w-full h-[calc(100vh-110px)] bg-cover bg-center bg-no-repeat bg-[url('../assets/About-Hero-Image.png')]">
-        <h1 className="text-7xl outlined-text font-sans font-bold pb-20">ABOUT</h1>
+        <Image src={AboutText} className="tablet:w-1/3 lg-mob:w-2/5 min-w-48 pb-20" alt="About Text" />
       </div>
       <div className="container px-10 mt-20 xs-desktop:mt-10 tablet:mt-7 lg-mob:mt-5 tablet:px-6">
         <p className="text-3xl font-bold mb-5">

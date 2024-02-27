@@ -18,7 +18,7 @@ function Page() {
           <Image src={logo} alt="logo" width={180} height={80} className="" />
         </div>
 
-        <InfiniteRotationCookie />
+        {/* <InfiniteRotationCookie /> */}
 
         <div className="flex flex-1 flex-col px-10 container gap-y-5 justify-end items-end pb-20">
           <Link href="/about">
@@ -54,7 +54,7 @@ function Page() {
       <div className="h-2 bg-black w-full mt-10 "></div>
       <div className="relative w-full overflow-hidden">
         <div className="w-full whitespace-nowrap animate-marquee font-bold text-5xl mt-[18px] tablet:text-4xl semiLg-mob:text-3xl">
-          Life can be tough, but “A Tuff Cookie never crumbles”{" "}
+          Life can be tough, but “A Tuff Cookie never crumbles” Life can be tough, but “A Tuff Cookie never crumbles”
         </div>
       </div>
       <div className="h-2 bg-black w-full mt-6 "></div>
