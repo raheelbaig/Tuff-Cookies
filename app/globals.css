@@ -35,5 +35,16 @@ html {
   -webkit-text-stroke: 4px #EEA954;
 }
 
+.animate-marqueee{
+  animation: marqueee 20s linear infinite;
+}
 
 
+@keyframes marqueee {
+  0% {
+      transform: translateX(5%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}

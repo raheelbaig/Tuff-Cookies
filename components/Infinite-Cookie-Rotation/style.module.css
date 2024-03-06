@@ -1,8 +1,17 @@
+.wrapper{
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 400px;
+  z-index: -1;
+  top: 0;
+}
 .container {
   position: absolute;
   right: -4%;
   top: -22%;
   width: 400px;
+  aspect-ratio: 1/1;
 }
 .blue_circle_image {
   width: 400px;
@@ -27,6 +36,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .wrapper{
+    height: 290px;
+
+  }
   .blue_circle_image {
     width: 290px;
   }

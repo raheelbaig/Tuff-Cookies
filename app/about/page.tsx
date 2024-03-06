@@ -2,17 +2,16 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import React from "react";
-import heroImage from "@/assets/About-Hero-Image.png";
-import pillars from "@/assets/pillars.png";
+import pillars from "@/assets/pillars.svg";
 import ProjectSlider from "@/components/Slider/Slider";
-import Circle from "@/assets/5pillarsCircle.png";
+import Circle from "@/assets/5pillarsCircle.svg";
 import AboutText from "@/assets/about-text.svg"
 
 function Page() {
   return (
     <div className="">
       <Header />
-      <div className="flex items-end justify-center w-full h-[calc(100vh-110px)] bg-cover bg-center bg-no-repeat bg-[url('../assets/About-Hero-Image.png')]">
+      <div className="flex items-end justify-center w-full h-[calc(100vh-110px)] bg-cover bg-center bg-no-repeat bg-[url('../assets/About-Hero-Image.jpg')]">
         <Image src={AboutText} className="tablet:w-1/3 lg-mob:w-2/5 min-w-48 pb-20" alt="About Text" />
       </div>
       <div className="container px-10 mt-20 xs-desktop:mt-10 tablet:mt-7 lg-mob:mt-5 tablet:px-6">
@@ -44,16 +43,16 @@ function Page() {
       <div className=" flex tablet:text-center tablet:flex-col items-center justify-center my-44 tablet:my-0">
         <div className="w-2/3 tablet:w-full container pl-16 tablet:pl-8">
           <div className="w-2/3 tablet:w-full">
-            <p className="font-bold text-[24px] mb-16 tablet:mb-8">
+            <p className="font-bold text-[24px] mb-14 tablet:mb-8">
               Our Model is built around
             </p>
             <div className=" ">
-              <h1 className="text-[#AAAAAA] text-[5.8vw] font-bold ">The</h1>
+              <h1 className="text-[#AAAAAA] text-[5.8vw] font-bold leading-none">The</h1>
 
               <div className="flex items-baseline gap-x-3 tablet:justify-center">
-                <h1 className="text-[#4F2816] text-[5.8vw] font-bold ">5 </h1>
+                <h1 className="text-[#4F2816] text-[5.8vw] font-bold leading-none">5 </h1>
                 <div className="flex items-baseline">
-                  <h1 className="text-[#4F2816] text-[5.8vw] font-bold ">
+                  <h1 className="text-[#4F2816] text-[5.8vw] font-bold leading-none">
                     P
                   </h1>
                   <Image
@@ -69,7 +68,7 @@ function Page() {
                 </div>
               </div>
 
-              <h1 className="text-[#AAAAAA] text-[5.5vw] font-bold mb-16 tablet:mb-10">
+              <h1 className="text-[#AAAAAA] text-[5.5vw] font-bold mb-16 tablet:mb-10 leading-none">
                 of Resilience
               </h1>
             </div>
@@ -81,7 +80,7 @@ function Page() {
         </div>
 
         <div className="tablet:mb-20">
-          <Image src={Circle} alt="Circle" width={410} height={410} className=" tablet:h-[300px]" />
+          <Image src={Circle} alt="Circle" width={500} height={500} className=" tablet:h-[300px]" />
         </div>
       </div>
 

@@ -24,7 +24,7 @@ function Header() {
       />
       </Link>
       <div className="flex gap-x-5 tablet:gap-x-4 text-primary  text-lg tablet:hidden">
-        <Link href="home tablet:hidden">
+        <Link href="home">
           <button className="hover:font-bold tablet:text-base">Home</button>
         </Link>
         <Link href="about">

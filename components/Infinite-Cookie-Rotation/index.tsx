@@ -6,7 +6,8 @@ import style from "./style.module.css";
 const InfiniteRotationCookie = () => {
  
   return (
-    <div className={`${style.container} semiLg-mob:hidden`}>
+  <div className={`${style.wrapper} semiLg-mob:hidden`}>
+    <div className={`${style.container}`}>
       <img
         className={style.blue_circle_image}
         src={blueCircle.src}
@@ -18,6 +19,7 @@ const InfiniteRotationCookie = () => {
         alt="orange-circle"
       />
       <img className={style.cookie_image} src={cookie.src} alt="cookie" />
+    </div>
     </div>
   );
 };

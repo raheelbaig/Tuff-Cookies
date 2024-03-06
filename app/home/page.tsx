@@ -13,12 +13,12 @@ import InfiniteRotationCookie from "@/components/Infinite-Cookie-Rotation";
 function Page() {
   return (
     <div>
-      <div className="flex flex-col w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('../assets/homepage_hero.png')]">
+      <div className="flex relative isolate flex-col w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('../assets/homepage_hero.png')]">
         <div className="px-10 container pt-4">
           <Image src={logo} alt="logo" width={180} height={80} className="" />
         </div>
 
-        {/* <InfiniteRotationCookie /> */}
+        <InfiniteRotationCookie />
 
         <div className="flex flex-1 flex-col px-10 container gap-y-5 justify-end items-end pb-20">
           <Link href="/about">
@@ -32,29 +32,11 @@ function Page() {
           </Link>
         </div>
       </div>
-      {/* <div className="container px-10 tablet:px-6 lg-mob:px-4">
-        <div className="absolute top-0 right-0 ">
-          <Image
-            src={cookie}
-            alt="cookie"
-            className="sm-desktop:w-[250px] sm-desktop:h-[180px]"
-          />
-        </div>
-        <div className="absolute right-32 bottom-60 tablet:bottom-72">
-          <HomeButton text="ABOUT" />
-        </div>
-        <div className="absolute right-32 bottom-40 tablet:bottom-56">
-          <HomeButton text="PROJECTS" />
-        </div>
-        <div className="absolute right-32 bottom-20 tablet:bottom-40">
-          <HomeButton text="CONTACT" />
-        </div>
-      </div> */}
 
       <div className="h-2 bg-black w-full mt-10 "></div>
       <div className="relative w-full overflow-hidden">
-        <div className="w-full whitespace-nowrap animate-marquee font-bold text-5xl mt-[18px] tablet:text-4xl semiLg-mob:text-3xl">
-          Life can be tough, but “A Tuff Cookie never crumbles” Life can be tough, but “A Tuff Cookie never crumbles”
+        <div className="w-full !leading-tight whitespace-nowrap animate-marqueee font-bold text-5xl mt-[18px] tablet:text-4xl semiLg-mob:text-3xl">
+          Life can be tough, but “A Tuff Cookie never crumbles” &nbsp;&nbsp;&nbsp;&nbsp; TUFF COOKIES &nbsp;&nbsp;&nbsp;&nbsp; Life can be tough, but “A Tuff Cookie never crumbles”
         </div>
       </div>
       <div className="h-2 bg-black w-full mt-6 "></div>
@@ -87,12 +69,12 @@ function Page() {
       </div>
 
       <div className="px-10 container flex flex-col justify-center items-center ">
-        <h1 className="text-[72px] font-bold text-primary mb-16">Video</h1>
+        <h1 className="text-[72px] font-bold text-primary mb-10 tracking-wider tablet:text-[40px] semiLg-mob:text-[24px]">WORKS</h1>
         <VideoPlayer />
       </div>
 
       {/* Footer */}
-      <div className="w-full h-[100px] mt-32">
+      <div className="w-full max-h-[100px] mt-0">
         <Image src={grass} alt="footer" />
       </div>
     </div>

@@ -2,7 +2,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { FormEventHandler, useState } from "react";
 import heroImage from "@/assets/contact-hero-image.png";
 import dots from "@/assets/buttonDot.png";
 
@@ -124,29 +124,47 @@ function Page() {
         </Modal.Header>
         <Modal.Body>
           <div>
-            <input
-              placeholder="Subject"
-              type="text"
-              className="border-2 bg-white border-primary rounded-md w-full py-2 pl-4 pr-2 outline-none"
-            />
-            <textarea
-              className="resize-none block w-full px-3 py-1.5 text-base font-normal  bg-white bg-clip-padding border-2 border-primary rounded-md mt-4 "
-              rows={4}
-              placeholder="Message"
-            ></textarea>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleModalDisplay();
+              }}
+            >
+              <input
+                required
+                placeholder="Subject"
+                type="text"
+                className="mb-4 border-2 bg-white border-primary rounded-md w-full py-2 pl-4 pr-2 outline-none"
+              />
+              <input
+                required
+                placeholder="Name"
+                type="text"
+                className="mb-4 border-2 bg-white border-primary rounded-md w-full py-2 pl-4 pr-2 outline-none"
+              />
+              <input
+                required
+                placeholder="Email"
+                type="email"
+                className="mb-4 border-2 bg-white border-primary rounded-md w-full py-2 pl-4 pr-2 outline-none"
+              />
+              <textarea
+                required
+                className="mb-4 resize-none block w-full px-3 py-1.5 text-base font-normal  bg-white bg-clip-padding border-2 border-primary rounded-md outline-none"
+                rows={4}
+                placeholder="Message"
+              ></textarea>
+              <button className="" type="submit">
+                <div className="flex items-center justify-between px-1 h-[45px] w-[150px] py-5 bg-[#FFC680] rounded-[60px] cursor-pointer hover:border-4 hover:border-secondary xs-desktop:h-[40px] xs-desktop:w-[150px]">
+                  <p className="text-lg font-semibold pl-5">Submit</p>
+                  <div className="w-[22px] h-[36px]">
+                    <Image src={dots} alt="dots" />
+                  </div>
+                </div>
+              </button>
+            </form>
           </div>
         </Modal.Body>
-        <Modal.Footer>
-          <button className="" onClick={handleModalDisplay}>
-            <div className="flex items-center justify-between px-1 h-[45px] w-[150px] py-5 bg-[#FFC680] rounded-[60px] cursor-pointer hover:border-4 hover:border-secondary xs-desktop:h-[40px] xs-desktop:w-[150px]">
-              
-              <p className="text-lg font-semibold pl-5">Submit</p>
-              <div className="w-[22px] h-[36px]">
-                <Image src={dots} alt="dots" />
-              </div>
-            </div>
-          </button>
-        </Modal.Footer>
       </Modal.Container>
     </>
   );
