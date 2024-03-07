@@ -9,8 +9,10 @@
       "/Projects/James_Gillespies/Ref-3.jpg"
     ],
     "quotes": [
-      "It was really enjoyable and it taught me a new skill that I hadn't tried before, and I've been doing it outside of school since then. I even got my own spray paints to do my own art at home",
-      "The best thing about this project is that it really felt like it came from the young people themselves. The impact on those young people meant that they came into school when they wouldn't have done, they talked to each other in ways they hadn't, they respected each other, they respected learning in a way that some of them had never done before, and they felt proud of themselves. Which was amazing. It was a brilliant thing."
+      {
+        "quote": "The best thing about this project is that it really felt like it came from the young people themselves. The impact on those young people meant that they came into school when they wouldn't have done, they talked to each other in ways they hadn't, they respected each other, they respected learning in a way that some of them had never done before, and they felt proud of themselves. Which was amazing. It was a brilliant thing",
+        "quoteBy": "Senior management"
+      }
     ]
   },
   {
@@ -23,7 +25,10 @@
       "/Projects/Graffiti_Workshops/Ref-3.jpg"
     ],
     "quotes": [
-      "It was really enjoyable and it taught me a new skill that I hadn't tried before, and I've been doing it outside of school since then. I even got my own spray paints to do my own art at home.” - Workshop Participant"
+      {
+        "quote": "It was really enjoyable and it taught me a new skill that I hadn't tried before, and I've been doing it outside of school since then. I even got my own spray paints to do my own art at home.",
+        "quoteBy": "Workshop Participant"
+      }
     ]
   },
   {
@@ -80,7 +85,10 @@
       "/Projects/Handover/Ref-3.png"
     ],
     "quotes": [
-      "This has genuinely been the most valuable and enriching experience I have ever had at Hampstead. Faisal, Marv and James were engaging, inspirational and positive, which led to students feeling motivated, included and valued. There was a real mix of students in both sessions but all were engaged and had the opportunity to be part of something. It was so wonderful to see students who have never been interested in the past, singing, beatboxing and clapping! I believe that students will leave today with a different perspective, feeling inspired and with a huge amount of positivity - not just about music, but about life! This has been the most exceptional day. Can you please come back?!.                                                                                                      "
+      {
+        "quote":"Today was truly remarkable at Hampstead. Faisal, Marv, and James brought immense inspiration and positivity, making every student feel valued and motivated. Witnessing students, even those previously disinterested, engaged in singing, beatboxing, and clapping was amazing. This experience undoubtedly leaves students with a newfound perspective, inspiration, and positivity, not just about music, but about life itself. Can you please come back?",
+        "quoteBy":"Teacher"
+      }                                                                                                      
     ]
   },
   {
@@ -93,9 +101,18 @@
       "/Projects/Enrichment_Day/Ref-3.jpg"
     ],
     "quotes": [
-      "It was very creative and very amazing. I have never experienced a lesson that can make me more confident about who I am and more passionate about what I do.",
-      "Students were engaged, directing their own learning. Real learning was happening. There was freedom to learn without an agenda.",
-      "This hasn't just been the most enriching day I've ever experienced at Hampstead School; this has been the most enriching day of my life!"
+      {
+        "quote":"It was very creative and very amazing. I have never experienced a lesson that can make me more confident about who I am and more passionate about what I do.",
+        "quoteBy":"Student"
+      },
+      {
+        "quote":"Students were engaged, directing their own learning. Real learning was happening. There was freedom to learn without an agenda",
+        "quoteBy":"Teacher"
+      },
+      {
+        "quote":"This hasn't just been the most enriching day I've ever experienced at Hampstead School; this has been the most enriching day of my life!",
+        "quoteBy":"Student"
+      }
     ]
   },
   {
