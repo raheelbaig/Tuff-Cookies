@@ -1,10 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import heroImage from "@/assets/homepage_hero.png";
 import heroImage1 from "@/assets/contact-hero-image.png";
 import logo from "@/assets/Logo.png";
 import HomeButton from "@/components/HomeButton";
-import cookie from "@/assets/CookieImage.png";
 import grass from "@/assets/grass.png";
 import VideoPlayer from "@/components/VideoPlayer";
 import Link from "next/link";
@@ -13,7 +11,7 @@ import InfiniteRotationCookie from "@/components/Infinite-Cookie-Rotation";
 function Page() {
   return (
     <div>
-      <div className="flex relative isolate flex-col w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('../assets/homepage_hero.png')]">
+      <div className="flex relative isolate flex-col w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('../assets/homepage_hero.jpg')]">
         <div className="px-10 container pt-4">
           <Image src={logo} alt="logo" width={180} height={80} className="" />
         </div>

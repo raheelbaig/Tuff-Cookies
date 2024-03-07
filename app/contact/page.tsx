@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import React, { FormEventHandler, useState } from "react";
 import heroImage from "@/assets/contact-hero-image.png";
-import dots from "@/assets/buttonDot.png";
+import dots from "@/assets/buttonDot.svg";
 
 // Logos
 import { FaFacebook } from "react-icons/fa";

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import dots from "@/assets/buttonDot.png";
+import dots from "@/assets/buttonDot.svg";
 
 function Button() {
   const [isExpanded, setIsExpanded] = useState(false);

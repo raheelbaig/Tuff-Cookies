@@ -1,5 +1,5 @@
 import React from "react";
-import dots from "@/assets/buttonDot.png";
+import dots from "@/assets/buttonDot.svg";
 import Image from "next/image";
 
 const HomeButton = ({ text }: { text: string }) => {

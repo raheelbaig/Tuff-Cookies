@@ -4,11 +4,8 @@ import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import React, { Fragment, useEffect, useRef, useState } from "react";
-import dots from "@/assets/buttonDot.png";
+import dots from "@/assets/buttonDot.svg";
 import logo from "@/assets/Logo.png";
-import HeroImage from "@/assets/project-hero-Image.png";
-import detailsImage from "@/assets/project-details-image.png";
-import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 // Import Swiper styles
 import "swiper/css";

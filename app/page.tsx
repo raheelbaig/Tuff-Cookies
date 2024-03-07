@@ -3,7 +3,7 @@ import logo from "@/assets/Logo.png";
 import Link from "next/link";
 export default function Home() {
   return (
-    <div className="bg-cover bg-center bg-no-repeat bg-[url('../assets/CookietronwrldLP.png')]">
+    <div className="bg-cover bg-center bg-no-repeat bg-[url('../assets/CookietronwrldLP.webp')]">
       <div className="min-h-screen flex  flex-col">
         <div className="container pt-5 tablet:px-3 px-10 ">
           <Image
