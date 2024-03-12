@@ -1,10 +1,20 @@
 import Image from "next/image";
 import logo from "@/assets/Logo.png";
 import Link from "next/link";
+import bgImage from "@/assets/CookietronwrldLP.webp";
 export default function Home() {
   return (
-    <div className="bg-cover bg-center bg-no-repeat bg-[url('../assets/CookietronwrldLP.webp')]">
-      <div className="min-h-screen flex  flex-col">
+    // <div className="bg-cover bg-center bg-no-repeat bg-[url('../assets/CookietronwrldLP.webp')]">
+    <div className="">
+      <div className="min-h-screen flex  flex-col relative isolate">
+        <Image
+          src={bgImage}
+          quality={90}
+          alt="Tuff Cookies Background"
+          fill
+          className="object-cover -z-[1]"
+          priority
+        />
         <div className="container pt-5 tablet:px-3 px-10 ">
           <Image
             src={logo}

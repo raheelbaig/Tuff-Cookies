@@ -284,7 +284,7 @@ function Page() {
                 className="object-cover rounded-[10.5px] bg-[#ffdcb1] "
                 src={detailsData.images[1]}
                 fill
-                alt="image"
+                alt="Project Image 1"
               />
             </div>
             <div className="w-full max-w-96 aspect-square relative">
@@ -292,7 +292,7 @@ function Page() {
                 className="object-cover rounded-[10.5px] bg-[#ffdcb1]"
                 src={detailsData.images[2]}
                 fill
-                alt="image"
+                alt="Project Image 2"
               />
             </div>
             <div className="w-full max-w-96 aspect-square relative">
@@ -300,7 +300,7 @@ function Page() {
                 className="object-cover rounded-[10.5px] bg-[#ffdcb1]"
                 src={detailsData.images[3]}
                 fill
-                alt="image"
+                alt="Project Image 3"
               />
             </div>
           </div>

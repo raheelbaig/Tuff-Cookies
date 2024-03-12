@@ -7,11 +7,19 @@ import grass from "@/assets/grass.png";
 import VideoPlayer from "@/components/VideoPlayer";
 import Link from "next/link";
 import InfiniteRotationCookie from "@/components/Infinite-Cookie-Rotation";
-
+import bgImage from "@/assets/homepage_hero.jpg";
 function Page() {
   return (
     <div>
-      <div className="flex relative isolate flex-col w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('../assets/homepage_hero.jpg')]">
+      <div className="flex relative isolate flex-col w-full h-screen">
+         <Image
+          src={bgImage}
+          quality={90}
+          alt="Homepage Background"
+          fill
+          className="object-cover -z-[1]"
+          priority
+        />
         <div className="px-10 container pt-4">
           <Image src={logo} alt="logo" width={180} height={80} className="" />
         </div>
